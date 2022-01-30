@@ -1,0 +1,32 @@
+{
+  "level1": {
+    "level1": {},
+    "level2": {
+      "iphone11": {
+        "name": "iphone11",
+        "count": 1000
+      }
+    },
+    "level3": {}
+  },
+  "level2": {
+    "level1": {},
+    "level2": {},
+    "level3": {
+      "ipad": {
+        "name": "ipad",
+        "count": 7
+      }
+    }
+  },
+  "level3": {
+    "level1": {},
+    "level2": {},
+    "level3": {}
+  },
+  "level4": {
+    "level1": {},
+    "level2": {},
+    "level3": {}
+  }
+}
