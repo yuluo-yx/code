@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页的标题部分</title>
+</head>
+<body>
+    <h1>这是网页的身体部分</h1>
+    <h2>这是h2标签</h2>
+
+    <p>这是文章标题标签</p>
+    <hr> <!-- 说平分割线标签 -->
+    <p>Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来简化新Spring应用的初始搭建以及开发过程。
+        <br> <!-- 文字强制换行显示 -->
+        该框架使用了特定的方式来进行配置，从而使开发人员不再需要定义样板化的配置。通过这种方式，Spring Boot
+        致力于在蓬勃发展的快速应用开发领域(rapid application development)成为领导者</p>
+
+    <h2>文本格式化标签</h2>
+    <hr>
+    <b>文本加粗</b>
+    <u>文本下划线</u>
+    <i>文本倾斜</i>
+    <s>删除线</s>
+    <strong>加粗</strong>
+    <ins>下划线</ins>
+    <em>倾斜</em>
+    <del>删除线</del>
+
+    <!-- 图片标签 -->
+    <h2>图片标签</h2>
+    <hr>
+    <!-- src为标签属性，代表图片来源（source） 
+        alt为替换文本，当图片加载不出来的时候显示替换文本 
+        title为图片标签， 鼠标悬停放在图片上时显示title内容
+        width: 图片宽度
+        height: 图片高度
+        注意：width和height属性只给出其中一个值时，另一个属性自动等比例缩放，图片不会变形
+            加入其中两个时图片可能会变形
+    -->
+    <img src="../images/9.jpg" alt="图片加载失败" title="显示图片" width="200" height="200">
+
+    <hr>
+
+    <h2>绝对和相对路径</h2>
+    <p>绝对路径：指目录下的位置，可直接到达的位置，通知从盘符开始<br>
+        E:\web_front\code\images\1.jpg
+        还包括网络地址，
+    </p>
+    <p>相对路径：从当前文件位置出发寻找目标文件位置<br>
+        ../images/1.jpg
+        相对路径分类：
+        <li>同级目录</li>
+        <p>./ </p>
+        <li>上级目录</li>
+        <p>../ 表示上级目录</p>
+        <li>下级目录</li>
+        <p>文件夹/文件名 表示下级目录</p>
+    </p>
+
+</body>
+</html>
