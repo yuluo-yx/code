@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动</title>
+
+    <style>
+        .top {
+            
+            margin: 0 auto;
+            width: 1000px;
+            /* height: 300px; */
+            background-color: pink;
+        }
+
+        .bottom {
+            height: 100px;
+            background-color: green;
+        }
+
+        .left {
+            float: left;
+            width: 200px;
+            height: 300px;
+            background-color: #ccc;
+        }
+
+        .right {
+            float: right;
+            width: 790px;
+            height: 300px;
+            background-color: skyblue;
+        }
+
+        .clearfix {
+            /* 清除左右两侧浮动的方法 */
+            clear: both;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h2>清除浮动</h2>
+    <hr>
+    <!-- 
+        介绍：清除浮动带来的影响
+            影响：如果子元素浮动了，此时子元素不能撑开标准流的块级父元素
+        原因：子元素浮动后  -----》   不占位置
+        目的：需要父元素有高度，从而不影响其他网页元素的布局
+
+        清除浮动的方法：
+            1、在父级标签上加上高度
+            2、给添加的块级元素设置 clear: both;  缺点：在页面中添加额外的标签，会让页面的htmk结构复杂
+            3、单伪元素清除法：用伪元素替代额外标签  优点：在项目中使用，直接给标签加类即可清除浮动
+            4、双伪元素清除法：用伪元素替代额外标签
+            5、直接给父元素这只 overflow: hidden ，优点：方便
+
+        什么样的情况才会受影响：
+            父子级标签，子级浮动，父级没有高度，后面的标准流盒子会受影响，显示出现错误
+     -->
+
+     <div class="top">
+        <div class="left"></div>
+        <div class="right"></div>
+        <!-- 2、额外标签清除浮动的影响 -->
+        <div class="clearfix"></div>
+     </div>
+
+     <div class="bottom"></div>
+</body>
+</html>

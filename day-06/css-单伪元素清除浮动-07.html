@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单伪元素清除浮动</title>
+
+    <style>
+        .top {
+            
+            margin: 0 auto;
+            width: 1000px;
+            /* height: 300px; */
+            background-color: pink;
+        }
+
+        .bottom {
+            height: 100px;
+            background-color: green;
+        }
+
+        .left {
+            float: left;
+            width: 200px;
+            height: 300px;
+            background-color: #ccc;
+        }
+
+        .right {
+            float: right;
+            width: 790px;
+            height: 300px;
+            background-color: skyblue;
+        }
+
+        /* 单伪元素清除法 */
+        .clearfix {
+            content: ' ';
+
+            /* 伪元素生成的标签是行内的，转换成块级 */
+            display: block;
+            clear: both;
+
+            /* 为了兼容性 */
+            height: 0;
+            visibility: hidden;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <h2>单伪元素清除浮动</h2>
+    <hr>
+
+    <div class="top clearfix">
+        <div class="left"></div>
+        <div class="right"></div>
+        <!-- 通过css在这加一个标签 -->
+     </div>
+
+     <div class="bottom"></div>
+
+</body>
+</html>

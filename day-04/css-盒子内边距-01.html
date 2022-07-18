@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子内边距</title>
+
+    <style>
+        #two {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            /* padding: 50px; */
+            padding: 10px 20px 30px 40px
+        }
+        #one {
+            /* padding和border都会撑大盒子 */
+            width: 240px;
+            height: 240px;
+            background-color: pink; 
+            border: 10px solid black;
+            padding: 20px 20px 20px 20px
+        }
+        #three {
+            width: 240px;
+            height: 240px;
+            background-color: pink; 
+            border: 10px solid black;
+            padding: 20px 20px 20px 20px;
+
+            /* 变成css3的盒子模型 不需要自己算盒子大小*/
+            box-sizing: border-box;
+            /* 这里的盒子大小为240.自动减去了padding和border */
+
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- 
+        padding也会撑大盒子的大小
+        padding属性也可以当作复合属性来使用，表示单独设置某个方向的内边距
+        
+        最多可以取4个值
+        padding: 上 右 下 左
+
+        取三个值的情况
+        padding: 上 左右 下
+
+        取两值
+        padding：上下 左右
+
+        取一个值
+        padding：上下作于
+     -->
+
+    <div id="two">
+        盒子内边距
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <!--
+        需求：盒子尺寸 300px*300px，背景粉色，边框10px实线黑色，上下左右20px内边距
+     -->
+    <div id="one">
+        one
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <h2>自动内减模式</h2>
+    <hr>
+    <!-- 
+        给border或者padding设置属性时，盒子会被撑大，如果不想盒子被撑大
+        有两种解决办法
+            1、手动内减
+                自己计算出多余的大小，从盒子样式中减去
+                计算量太大，太麻烦
+            2、自动内减
+                给盒子设置属性box-sizing: border-box;即可
+                浏览器自动计算大小，从内容中减去
+     -->
+    <div id="three">
+        自动内减模型
+    </div>
+
+
+</body>
+</html>

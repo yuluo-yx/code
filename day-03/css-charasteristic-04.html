@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css特性</title>
+</head>
+<body>
+   
+    <h1>继承性、层叠性</h1>
+    <hr>
+    <h2>继承性</h2>
+    <hr>
+    <p>
+        特性：子元素默认有父元素样式的特点（子继承父）<br>
+        可以继承的常见属性（文字属性都可以继承）<br>
+        1、color <br>
+        2、font-style，font-weight，font-size，font-family  <br>
+        3、text-indent，text-align  <br>
+        4、line-height  <br>
+        5、……  <br>
+        注意：可以通过调试工具判断是否可以继承
+    </p>
+
+    <div>
+        <div>
+            <p>
+                这是一段文字，用来测试text-indent的继承性1
+            </p>
+        </div>
+        <span>
+            span标签
+        </span>
+    </div>
+
+    <style>
+        div {
+            text-indent: 2em;
+            color: red;
+            font-family: 宋体;
+        }
+    </style>
+
+    <h2>层叠性</h2>
+    <hr>
+    <p>之前的样式会覆盖之前的样式</p>
+    <div class="divone">
+        <p class="pone">
+            测试层叠性
+        </p>
+    </div>
+
+    <style>
+        .divone {
+            color: red;
+        }
+        .pone {
+            color: green;
+        }
+    </style>
+
+
+</body>
+</html>

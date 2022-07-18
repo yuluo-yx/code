@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素</title>
+
+    <style>
+        .father {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+        .father::before {
+            /* 内容，必须的有 */
+            content: 'i love ';
+            /* 可以添加css样式属性 */
+            /* 默认情况下是行内属性。使用dispaly: block转换为块级元素 */
+        }
+        .father::after {
+            content: ' every time';
+        }
+    </style>
+
+</head>
+<body>
+    
+    <p>
+        使用css创建标签用的 <br>
+        创建出来一个假的标签
+    </p>
+
+    <!-- 
+        一般页面中的非主体元素可以使用伪元素 装饰性的不重要的小图
+        区别：
+            元素：html设置的标签
+            伪元素：css模拟出来的标签
+        种类：
+            ::before 在父元素内容的最前添加一个伪元素
+            ::after 在父元素的最后添加一个伪元素
+        注意点：
+            必须设置content属性才能生效
+            伪元素必须是行内元素
+     -->
+
+     <!-- 找父级，在父级里面创建子标签 -->
+     <div class="father">
+        father
+     </div>
+
+     <!-- 
+        在div中加上一个一句话 
+        i love father every time 
+        (i love )father( every time)
+    -->
+
+</body>
+</html>

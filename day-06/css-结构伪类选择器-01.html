@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构伪类选择器</title>
+
+    <style>
+        li:first-child {
+            background-color: aqua;
+        }
+
+        li:last-child {
+            background-color: pink;
+        }
+
+        li:nth-child(4) {
+            background-color: blue;
+        }
+
+        li:nth-last-child(3) {
+            background-color: green;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div>
+        <p>结构伪类选择器：</p>
+        <p>作用：根据元素之间的结构关系查找元素</p>
+        <p>优势：减少对于HTML中类的依赖，有利于代码保持整洁</p>
+        <p>场景：常用于查找某父级选择器中的元素</p>
+        
+    </div>
+
+     <table border="1">
+        <tr>
+            <th>
+                选择器
+            </th>
+            <th>
+                说明
+            </th>
+        </tr>
+        <tr>
+            <td>
+                E:first-child()
+            </td>
+            <td>
+                匹配父元素中第一个子元素，并且是E元素
+            </td>
+        </tr>
+        <tr>
+            <td>
+                E:last-child()
+            </td>
+            <td>
+                匹配父元素中最后一个子元素，并且是E元素
+            </td>
+        </tr>
+        <tr>
+            <td>
+                E:nth-child(n)
+            </td>
+            <td>
+                匹配父元素中第n个子元素，并且是E元素
+            </td>
+        </tr>
+        <tr>
+            <td>
+                E:nth-last-child(n)
+            </td>
+            <td>
+                匹配父元素中倒数第n个子元素，并且是E元素
+            </td>
+        </tr>
+
+     </table>
+
+     <!-- ul>li{这是第$个li}*8 -->
+     <ul>
+        <li>这是第1个li</li>
+        <li>这是第2个li</li>
+        <li>这是第3个li</li>
+        <li>这是第4个li</li>
+        <li>这是第5个li</li>
+        <li>这是第6个li</li>
+        <li>这是第7个li</li>
+        <li>这是第8个li</li>
+     </ul>
+
+     <table border="1" style="text-align: center;">
+        <tr>
+            <th>功能</th>
+            <th>公式</th>
+        </tr>
+        <tr>
+            <td>偶数</td>
+            <td>2n、even</td>
+        </tr>
+        <tr>
+            <td>奇数</td>
+            <td>2n+1、2n-1、odd</td>
+        </tr>
+        <tr>
+            <td>找到前5个</td>
+            <td>-n+5</td> 
+        </tr>
+        <tr>
+            <td>找到从第五个往后</td>
+            <td>n+5</td>
+        </tr>
+        <tr>
+            <td colspan="2">加几找前几个或者后几个</td>
+        </tr>
+     </table>
+
+</body>
+</html>

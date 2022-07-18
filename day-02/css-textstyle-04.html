@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo2</title>
+</head>
+<body>
+
+    <h2>文本样式</h2>
+    <hr>
+    <!-- 
+        文本样式：
+            文本缩进：text-indent
+                取值：
+                    数字+px  （像素单位）
+                    数字+em  （1em=当前标签的font-size的大小）
+            文本水平对齐方式: text-align：
+                取值：
+                    left：左对齐
+                    center：居中对齐
+                    right：右对齐
+                注意点：
+                    text-align可以让文本、span、a标签、input标签、img标签水平居中
+                    如果需要以上标签居中时，则需要在以上元素的父元素设置
+            文本修饰：text-decoration
+                取值：
+                    underline：下划线 （常用）
+                    line-through：删除线 （不常用）
+                    overline：上划线 （几乎不用）
+                    none：无装饰线 （常用）
+                注意：
+                    开发中会使用text-decoration：none清楚a标签的默认下划线
+     -->
+     <style>
+        #one {
+            /* text-indent: 50px; */
+            /* 一般首行缩进两字符 
+                浏览器默认字体大小是16px，则首行缩进两个是16 * 2 = 32
+            */
+            /* text-indent: 32px; */
+
+            text-indent: 2em;
+
+        }
+     </style>
+
+     <p id="one">Spring 是最受欢迎的企业级 Java 应用程序开发框架，数以百万的来自世界各地的开发人员使用 Spring 框架来创建性能好、易于测试、可重用的代码。
+
+        Spring 框架是一个开源的 Java 平台，它最初是由 Rod Johnson 编写的，并且于 2003 年 6 月首次在 Apache 2.0 许可下发布。
+        
+        Spring 是轻量级的框架，其基础版本只有 2 MB 左右的大小。
+        
+        Spring 框架的核心特性是可以用于开发任何 Java 应用程序，但是在 Java EE 平台上构建 web 应用程序是需要扩展的。 Spring 框架的目标是使 J2EE 开发变得更容易使用，通过启用基于 POJO 的编程模型来促进良好的编程实践。
+    </p>
+ 
+    <h2>文本水平对齐方式</h2>
+    <hr>
+    <p class="onep">
+        Spring 是最受欢迎的企业级 Java 应用程序开发框架，数以百万的来自世界各地的开发人员使用 Spring 框架来创建性能好、易于测试、可重用的代码。
+
+        Spring 框架是一个开源的 Java 平台，它最初是由 Rod Johnson 编写的，并且于 2003 年 6 月首次在 Apache 2.0 许可下发布。
+        
+        Spring 是轻量级的框架，其基础版本只有 2 MB 左右的大小。
+        
+        Spring 框架的核心特性是可以用于开发任何 Java 应用程序，但是在 Java EE 平台上构建 web 应用程序是需要扩展的。 Spring 框架的目标是使 J2EE 开发变得更容易使用，通过启用基于 POJO 的编程模型来促进良好的编程实践。
+    </p>
+    <style>
+        h2 {
+            text-align: center;
+        }
+        .onep {
+            text-align: right;
+        }
+    </style>
+
+    <div>
+        <img src="../images/1.jpg" alt="">
+    </div>
+    <style>
+        div {
+            text-align: center;
+        }
+    </style>
+
+    <h2>文本修饰</h2>
+    <hr>
+    <a href="http://www.baidu.com">百度</a>
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
+
+</body>
+</html>

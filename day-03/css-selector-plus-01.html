@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择器进阶</title>
+</head>
+<body>
+    
+    <h2>选择器进阶</h2>
+    <hr>
+    <!-- 
+        复合选择器
+            后代选择器：在选择器1中找到标签的后代，儿子，孙子，重孙子
+                选择器语法：选择器1 选择器2 {
+                    css样式代码
+                }
+                使用空格隔开
+            子代选择器：在选择器1中所找到的子代（儿子）中，找到满足选择器2的标签，设置样式
+                选择器语法：选择器1 > 选择器2 {
+                    css样式代码
+                }
+                注意点：
+                    子代只包括儿子
+                    子代选择器中，选择器与选择器之间通过 > 隔开
+        并集选择器: 同时选择多组标签，设置相同的样式，
+                选择器语法：选择器1，选择器2 {
+                    css样式代码
+                }
+                注意：推荐写一个选择器就换行，提高可读性
+        交集选择器：选中页面中同时满足多个选择器的标签  找到页面中既能被选择器1选中的标签，又能被选择器2选中的标签，设置样式
+               选择器语法：选择器1选择器2 {
+                    css样式代码
+                } 
+                注意：
+                    选择器之间的紧挨着的，没有空格
+                    交集选择器中如果有标签选择器，标签选择器必须写在前面
+        hover伪类选择器：选中鼠标悬停在元素上的状态吗，设置样式
+                选择器语法：标签选择器:hover {
+                    css样式代码
+                }
+                注意：
+                    伪类选择器选中的是元素的某种状态
+                    任何标签都可以悬停
+        Emmet语法
+     -->
+     <p>这是p标签</p>
+     <div>
+        <p>
+            这是div的儿子p  
+            <br>
+            <span>
+                这是div的孙子
+            </span>
+        </p>
+     </div>
+
+     <style>
+        div p{
+          color: red;  
+        }
+        div p span {
+            color: green;
+        }
+     </style>
+
+     <h2>子代选择器</h2>
+     <hr>
+     <div>
+        <p>
+            <span>
+                这是子代选择器，p的子代为span
+            </span>
+        </p>
+     </div>
+
+     <style>
+        p > span {
+            font-style: italic;
+            color: red;
+            font-family: 宋体;
+        }
+     </style>
+
+     <h2>并集选择器</h2>
+     <hr>
+     <p>ppp</p>
+     <a href="#">aaa</a>   <br>
+     <span>span</span>
+     <h4>h4</h4>
+     <style>
+        /* 并集选择器 */
+        p,
+        a, 
+        span, 
+        h4 {
+            color: yellowgreen;
+            font-style: italic;
+            font-weight: 400;
+        }
+     </style>
+
+     <h2>交集选择器</h2>
+     <hr>
+     <p class="box">这是p标签</p>
+     <p>ppppppppp</p>
+     <div class="box">
+        这是div标签
+     </div>
+     <style>
+        /* 需要找到带box类的p标签，设置字体为红色 
+        必须是p选择器，并且带box类名
+        */
+        p.box{
+            color: blue
+        }
+     </style>
+
+     <h2>伪类选择器</h2>
+     <hr>
+     <div>
+        <a href="#">a标签</a>
+     </div>
+     <style>
+        a:hover {
+            background-color: blue;
+            font-weight: 700;
+        }
+     </style>
+
+</body>
+</html>

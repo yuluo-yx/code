@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型</title>
+
+    <style>
+        #two {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 边框线 */
+            border: 3px dotted #000;
+        }
+        .one {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 边框线 */
+            /* border-left: 10px dotted #000;  */
+            border-bottom: 10px dotted #000; 
+        }
+        .three {
+            background-color: green;
+            border: 10px solid black;
+            width: 380px;
+            height: 380px;
+        }
+    </style> 
+</head>
+<body>
+    
+    <!-- 
+        边框：border
+        属性值：单个取值的连写，属性值之间用空格隔开 属性值之间没有先后顺序
+               粗细 线条样式 颜色
+            border: 10px, solid red
+                solid：实线
+                dashed：虚线
+                dotted：点线
+        单方向边框设置：border-方位名词，只给盒子的某个方向单独设置边框
+            属性值：连写的取值
+        
+            border会撑大盒子
+     -->
+
+    <div id="two">
+        内容
+    </div>
+
+    <br>
+    <br>
+
+    <div class="one">
+        div
+    </div>
+
+    <br>
+    <br>
+
+    <!-- 
+        小需求：400px*400px 背景绿色 边框10px，实线 黑色 
+
+        盒子大小的计算方式：
+            上边框 + height + 上边框
+            左边框 + widht + 右边框
+     -->
+    <div class="three">
+        小需求
+    </div>
+
+</body>
+</html>

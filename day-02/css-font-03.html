@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo2</title>
+</head>
+<body>
+
+    <h1>字体样式</h1>
+    <hr>
+    <!-- 
+        1、字体大小：font-size  
+            浏览器默认的字体大小是16px
+            取值时：数字+px
+        2、字体粗细：font-weight
+            关键字：
+                正常：normal
+                加粗：bold
+            取值：
+                100-900
+                正常：400
+                加粗：00
+            开发中使用数字
+        3、字体样式：font-style
+            取值：
+                正常：normal
+                倾斜：italic
+        4、字体类型：font-family
+            windows默认为微软雅黑字体
+            mac默认为苹方字体
+            取值：
+                黑体、宋体、楷体、微软雅黑（最常用）
+            常见字体系列：
+                无衬线字体（sans-serif）：文字笔画粗细均匀，首尾无装饰，网页中大多为此字体，黑体、Arial等
+                衬线字体（serif）：文字笔画粗细不均匀，首尾有装饰，报刊书籍中常用，宋体，Times New Roman等
+                等宽字体：每个字母或者文字的宽度相等，用于程序代码编写，有利于阅读和书写，Consolas， fira code等
+        5、字体类型：font属性连写
+            取值：
+                font：style，weight，size，family；
+            省略要求：
+                只能省略前两个，省略了相当于设置了默认值
+     -->
+     <p>这是一段文本内容</p>
+
+     <style>
+        p {
+            font-size: 20px;
+            font-weight: 700;
+        }
+     </style>
+
+    <span>这是一段文本内容</span>  <br>
+    <em>em</em>
+
+    <style>
+    span {
+        font-style: italic;
+    }
+    em {
+        /* 字体变正常，不倾斜 */
+        font-style: normal;
+    }
+    </style>
+
+    <h2>font的联合字体属性</h2>
+    <hr>
+    <p id="fontp">
+        font的联合字体属性
+    </p>
+
+    <style>
+        #fontp {
+            font: normal 400 30px 宋体 ;
+        }
+    </style>
+
+</body>
+</html>

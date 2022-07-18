@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            width: 1000px;
+            height: 300px;
+            background-color: pink;
+
+            /* 设置版心居中 */
+            margin: 0 auto;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- 
+        浏览器会自己给部分标签设置默认margin和padding值，但一般在项目开始的时候需要先清除这些默认的margin和padding，后续自己设置
+        比如：body标签默认有margin：8px
+             p标签默认有上下的margin：
+             ……
+        解决办法：使用通配符选择器（京东解决方法）  淘宝使用并集选择器，清除自己想要清除的标签属性值
+            * {
+                margin: 0;
+                padding: 0;
+            }
+     -->
+
+     <!-- 盒子在浏览器的居中位置显示
+          版心居中
+          版心：网页的有效内容    
+    -->
+     <div>
+        版心居中
+     </div>
+
+</body>
+</html>

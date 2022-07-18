@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素显示模式</title>
+</head>
+<body>
+    
+    <h2>显示模式</h2>
+    <p>/*显示模式就是一个元素标签以怎样的方式显示在网页中，是显示一个还是显示多个，一行可以显示几个元素的问题*/</p>
+
+    <h3>块级显示模式</h3>
+    <hr>
+    <p>
+        div就是块级显示模式<br>
+        如果是块级标签，他的大小默认和父级标签大小一样
+    </p>
+    <style>
+        div {
+            background-color: red;
+        }
+        #div1 {
+            background-color: green;
+        }
+    </style>
+    <div>1111</div>
+    <div id="div1">2222</div>
+
+    <h3>行内模式</h3>
+    <hr>
+    <p>显示特点：<br>
+        一行可以显示多个，宽度和高度默认由内容撑开，<strong>不可以设置宽高</strong>  <br>
+        例如：a，span，b，u，i，ins，em
+    </p>
+    <span>span标签</span>
+    <span>span标签</span>
+    <span>span标签</span>
+    <style>
+        span {
+            background-color: pink;
+        }
+    </style>
+
+
+    <h3>行内块元素</h3>
+    <hr>
+    <p>一行可以设置多个<br>
+        可以设置宽高
+        例如：input，textarea，button，select……<br>
+        特殊情况：img标签有行内块元素的特性，但是在chrome浏览器的调试工具中显示的是inline
+    </p>
+
+    <h3>元素显示模式转换</h3>
+    <hr>
+    <p>目的：改变元素默认的显示特点：让元素符合布局要求</p>
+    语法：
+    <table border="1">
+        <tr>
+            <th>属性</th>
+            <th>效果</th>
+            <th>使用频率</th>
+        </tr>
+        <tr> 
+            <td>display：block</td>
+            <td>转换成块级元素</td>
+            <td>较多</td>
+        </tr>
+        <tr> 
+            <td>inline-block</td>
+            <td>转换成行内块元素</td>
+            <td>较少</td>
+        </tr>
+        <tr> 
+            <td>display：inline</td>
+            <td>转换成块级元素</td>
+            <td>极少</td>
+        </tr>
+    </table>
+
+</body>
+</html>

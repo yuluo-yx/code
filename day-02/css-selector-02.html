@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo2</title>
+</head>
+<body>
+
+    <h2>标签选择器</h2>
+    <!--
+        结构：
+            标签名：{
+                css属性：属性值;
+                ……
+            }
+        通过标签名找到页面中对应的标签，设置样式
+        注意：
+            1、标签选择器选择的是一类标签，而不是单个标签
+            2、标签选择器无论嵌套关系多深，都能找到对应的标签
+    -->
+    <hr>
+    <p>p标签选择器</p>
+    <style>
+        p {
+            color: red
+        }
+    </style>
+
+    <h2>类选择器</h2>
+    <!-- 
+        .类名 {
+            css属性名：属性值;
+            ……
+        }
+        通过类名寻找，找到页面中带有这个类名的标签，设置样式
+        注意：
+            所有标签上都有class属性，class属性的值称为类名
+            类名可以由数字、字母、下划线、中划线组成，但是不能以数字或者中划线开头
+            一个标签可以有多个类名，类名之间用空格隔开
+            类名可以重复，一个类选择器可以同时选中多个标签
+     -->
+    <hr>
+    <div class="divStyle backgroungStyle">
+        这是div标签，用css的类选择器修饰
+    </div>
+
+    <style>
+        .divStyle {
+            color: red;
+            font-size: 20px;
+        }
+        .backgroungStyle {
+            background-color: green;
+        }
+    </style>
+
+    <h2>id选择器</h2>
+    <!--  
+        结构：#id {
+            css属性名：属性值：
+            ……
+        }
+        作用：通过id属性值，找到页面中带有这个属性值的标签，设置样式
+        注意：
+            所有标签上都有id属性
+            id属性值类似于身份证号码，在这个页面时唯一且不可重复的
+            一个标签上只能有一个id属性值
+            一个id选择器只能选中一个标签
+    -->
+    <hr>
+    <div id="spanone">
+        <p id="onep">
+            onep中的文本
+        </p>
+        <p id="twop">
+            twop中的文本
+        </p>
+    </div>
+
+    <style>
+        #onep {
+            color:green;
+        }
+        #twop {
+            color: red;
+        }
+        #spanone {
+            width: 200;
+            height: 200;
+            background-color: yellow;
+        }
+    </style>
+
+    <h2>通配符选择器</h2>
+    <!-- 
+        结构：
+            * {
+                css属性值：属性名;
+            }
+        找到页面中的所有标签，设置样式
+        注意：
+            开发中极少用到
+     -->
+    <hr>
+
+
+</body>
+</html>

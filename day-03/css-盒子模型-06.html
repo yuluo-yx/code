@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型</title>
+</head>
+<body>
+    
+    <P>盒子模型的定义：<br>
+        页面中的每一个标签，都可以看作是一个盒子，通过盒子的视角更容易实现布局  <br>
+        浏览器渲染网页的时候，会将网页中的元素看作是一个个的矩形区域，我们形象的称之为盒子  <br>
+    </P>
+
+    <p>
+        盒子模型： <br>
+        css中规定盒子分别由：内容区域（content），内边距区域（padding），边框区域（border），外边距区域（margin）构成，这就是盒子模型
+    </p>
+
+    <div id="one">
+        <div id="two">
+            内容
+        </div>
+    </div>
+
+    <style>
+
+        #one {
+            background-color: yellow;
+            width: 600px;
+            height: 600px;
+        }
+
+        #two {
+            background-color: pink;
+            width: 300px;
+            height: 300px;
+            
+            /* 边框线 */
+            border: 1px solid black;
+            
+            /* 内边距 == 填充泡沫 出现在盒子和盒子边缘之间 */
+            padding: 30px;
+
+            /* 外边距 */
+            margin: 50px;
+
+        }
+    </style>
+
+</body>
+</html>
